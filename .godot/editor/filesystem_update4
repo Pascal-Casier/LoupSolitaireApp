@@ -1,2 +1,3 @@
 res://scenes/main/Main.tscn
-res://scripts/singletons/GameState.gd
+res://scenes/panels/NotesPanel/NotesPanel.tscn
+res://scripts/singletons/AudioManager.gd

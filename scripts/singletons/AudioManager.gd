@@ -11,8 +11,9 @@ func _ready() -> void:
 	ui_player = AudioStreamPlayer.new()
 	add_child(ui_player)
 
-	# Normalement on charerait les sons ici.
-	# ex: dice_player.stream = preload("res://assets/sounds/dice_roll.ogg")
+
+	dice_player.stream = preload("res://assets/sounds/d10_2.mp3")
+	ui_player.stream = preload("res://assets/sounds/UIClick_BLEEOOP_Baby_Click.ogg")
 
 func play_dice_roll() -> void:
 	if dice_player.stream:
