@@ -77,6 +77,7 @@ func reset_game() -> void:
 	GameState.notes = ""
 	GameState.has_weapon_mastery = false
 	GameState.mastered_weapon = ""
+	GameState.stats_rolled = false
 	
 	# Émettre les signaux
 	GameState.load_state_dict(GameState.get_state_dict())

@@ -1,3 +1,8 @@
 res://scenes/main/Main.tscn
 res://scenes/panels/NotesPanel/NotesPanel.tscn
 res://scripts/singletons/AudioManager.gd
+res://scenes/panels/StatsPanel/StatsPanel.gd
+res://scenes/panels/StatsPanel/StatsPanel.tscn
+res://scripts/singletons/GameState.gd
+res://scenes/panels/WeaponsPanel/WeaponsPanel.tscn
+res://scripts/singletons/SaveManager.gd

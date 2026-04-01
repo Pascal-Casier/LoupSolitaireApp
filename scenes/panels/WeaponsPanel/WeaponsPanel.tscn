@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://weaponspanel1"]
+[gd_scene format=3 uid="uid://c18dqd7ggm0s7"]
 
-[ext_resource type="Script" path="res://scenes/panels/WeaponsPanel/WeaponsPanel.gd" id="1_weap"]
+[ext_resource type="Script" uid="uid://7jv0b5owdd5n" path="res://scenes/panels/WeaponsPanel/WeaponsPanel.gd" id="1_weap"]
 
-[node name="WeaponsPanel" type="PanelContainer"]
+[node name="WeaponsPanel" type="PanelContainer" unique_id=1999273750]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -10,35 +10,37 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_weap")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1611557019]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="Header" type="ColorRect" parent="VBoxContainer"]
+[node name="Header" type="ColorRect" parent="VBoxContainer" unique_id=1602485813]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
-color = Color(0.2, 0.4, 0.2, 1)
+color = Color(0.05140285, 0.0203671, 0.38151044, 1)
 
-[node name="TitleLabel" type="Label" parent="VBoxContainer/Header"]
+[node name="TitleLabel" type="Label" parent="VBoxContainer/Header" unique_id=334652268]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 text = "UI_WEAPONS_TITLE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="WeaponList" type="VBoxContainer" parent="VBoxContainer"]
+[node name="WeaponList" type="VBoxContainer" parent="VBoxContainer" unique_id=643588865]
 layout_mode = 2
 theme_override_constants/separation = 5
 
-[node name="AddContainer" type="HBoxContainer" parent="VBoxContainer"]
+[node name="AddContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=374550237]
 layout_mode = 2
 
-[node name="ComboAdd" type="OptionButton" parent="VBoxContainer/AddContainer"]
+[node name="ComboAdd" type="OptionButton" parent="VBoxContainer/AddContainer" unique_id=309855785]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="BtnAdd" type="Button" parent="VBoxContainer/AddContainer"]
+[node name="BtnAdd" type="Button" parent="VBoxContainer/AddContainer" unique_id=214009473]
 layout_mode = 2
 text = "+"

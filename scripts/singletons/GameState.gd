@@ -24,6 +24,7 @@ var weapons := [] # Array de strings (max 2)
 var disciplines := [] # Array de strings (max 5)
 var gold: int = 0
 var notes: String = ""
+var stats_rolled: bool = false
 
 # Spécifiques à certaines disciplines
 var has_weapon_mastery: bool = false
@@ -57,6 +58,7 @@ func _ready() -> void:
 func roll_initial_stats() -> void:
 	stats.base_combat_skill = 10 + roll_d10()
 	stats.base_max_endurance = 20 + roll_d10()
+	stats_rolled = true
 	
 	stats.combat_skill = stats.base_combat_skill
 	stats.max_endurance = stats.base_max_endurance
@@ -65,6 +67,11 @@ func roll_initial_stats() -> void:
 
 func modify_current_endurance(amount: int) -> void:
 	stats.current_endurance = clampi(stats.current_endurance + amount, 0, stats.max_endurance)
+	emit_stats()
+
+func modify_combat_skill(amount: int) -> void:
+	stats.base_combat_skill = max(0, stats.base_combat_skill + amount)
+	stats.combat_skill = stats.base_combat_skill
 	emit_stats()
 
 func get_total_combat_skill() -> int:
@@ -221,6 +228,7 @@ func get_state_dict() -> Dictionary:
 		"disciplines": disciplines,
 		"gold": gold,
 		"notes": notes,
+		"stats_rolled": stats_rolled,
 		"has_weapon_mastery": has_weapon_mastery,
 		"mastered_weapon": mastered_weapon
 	}
@@ -232,6 +240,7 @@ func load_state_dict(data: Dictionary) -> void:
 	disciplines = data.get("disciplines", disciplines)
 	gold = data.get("gold", gold)
 	notes = data.get("notes", notes)
+	stats_rolled = data.get("stats_rolled", false)
 	has_weapon_mastery = data.get("has_weapon_mastery", false)
 	mastered_weapon = data.get("mastered_weapon", "")
 	

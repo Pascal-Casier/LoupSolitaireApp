@@ -79,7 +79,7 @@ corner_radius_bottom_left = 4
 shadow_offset = Vector2(2, 2)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3km4f"]
-bg_color = Color(0.010248822, 0.0145787, 0.12109375, 1)
+bg_color = Color(0.011764706, 0.015686275, 0.12156863, 0.61960787)
 
 [sub_resource type="Theme" id="Theme_qkm1d"]
 default_font = ExtResource("1_qkm1d")
@@ -126,9 +126,11 @@ theme_override_constants/margin_bottom = 20
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=450958165]
 layout_mode = 2
+theme_override_constants/separation = 9
 
 [node name="TopBar" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1214809452]
 layout_mode = 2
+theme_override_constants/separation = 10
 
 [node name="BtnSave" type="Button" parent="MarginContainer/VBoxContainer/TopBar" unique_id=1178757026]
 layout_mode = 2
@@ -148,6 +150,7 @@ size_flags_horizontal = 3
 
 [node name="LangContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TopBar" unique_id=543698044]
 layout_mode = 2
+theme_override_constants/separation = 10
 
 [node name="BtnFR" type="Button" parent="MarginContainer/VBoxContainer/TopBar/LangContainer" unique_id=712007387]
 layout_mode = 2
@@ -171,6 +174,7 @@ alignment = 1
 [node name="ColLeft" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/ColumnsLayout" unique_id=1486880056]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_constants/separation = 11
 
 [node name="StatsPanel" parent="MarginContainer/VBoxContainer/ScrollContainer/ColumnsLayout/ColLeft" unique_id=571231600 instance=ExtResource("2_q24mn")]
 layout_mode = 2
@@ -187,6 +191,7 @@ layout_mode = 2
 [node name="ColCenter" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/ColumnsLayout" unique_id=725967396]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_constants/separation = 10
 
 [node name="DisciplinesPanel" parent="MarginContainer/VBoxContainer/ScrollContainer/ColumnsLayout/ColCenter" unique_id=1500763873 instance=ExtResource("3_gyg6b")]
 layout_mode = 2
@@ -201,6 +206,7 @@ size_flags_horizontal = 3
 [node name="CombatSlot" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/ColumnsLayout/ColRight" unique_id=1606178546]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_constants/separation = 10
 
 [node name="CombatPanel" parent="MarginContainer/VBoxContainer/ScrollContainer/ColumnsLayout/ColRight/CombatSlot" unique_id=1488117252 instance=ExtResource("2_nha0i")]
 layout_mode = 2
