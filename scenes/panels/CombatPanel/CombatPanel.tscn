@@ -1,0 +1,76 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1combatpanel1"]
+
+[ext_resource type="Script" path="res://scenes/panels/CombatPanel/CombatPanel.gd" id="1_combat"]
+
+[node name="CombatPanel" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_combat")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Header" type="ColorRect" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+color = Color(0.3, 0.1, 0.1, 1)
+
+[node name="TitleLabel" type="Label" parent="VBoxContainer/Header"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "UI_COMBAT_TITLE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EnemyInfo" type="GridContainer" parent="VBoxContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="NameLabel" type="Label" parent="VBoxContainer/EnemyInfo"]
+layout_mode = 2
+text = "UI_COMBAT_ENEMY_NAME"
+
+[node name="NameEdit" type="LineEdit" parent="VBoxContainer/EnemyInfo"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SkillLabel" type="Label" parent="VBoxContainer/EnemyInfo"]
+layout_mode = 2
+text = "UI_COMBAT_ENEMY_SKILL"
+
+[node name="SkillEdit" type="LineEdit" parent="VBoxContainer/EnemyInfo"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="EnduranceLabel" type="Label" parent="VBoxContainer/EnemyInfo"]
+layout_mode = 2
+text = "UI_COMBAT_ENEMY_ENDURANCE"
+
+[node name="EnduranceEdit" type="LineEdit" parent="VBoxContainer/EnemyInfo"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ActionContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="BtnAttack" type="Button" parent="VBoxContainer/ActionContainer"]
+custom_minimum_size = Vector2(150, 40)
+layout_mode = 2
+text = "UI_COMBAT_BTN_ATTACK"
+
+[node name="LogContainer" type="ScrollContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+
+[node name="LogLabel" type="Label" parent="VBoxContainer/LogContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+autowrap_mode = 2

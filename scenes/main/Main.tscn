@@ -1,0 +1,130 @@
+[gd_scene format=3 uid="uid://mainscene123"]
+
+[ext_resource type="FontFile" uid="uid://b3jo60ffyju11" path="res://assets/fonts/ChangaOne-Italic.ttf" id="1_3km4f"]
+[ext_resource type="Script" uid="uid://cbyv464d3fnfh" path="res://scenes/main/Main.gd" id="1_main"]
+[ext_resource type="PackedScene" uid="uid://bkvp4wrnpsefo" path="res://scenes/panels/CombatPanel/CombatPanel.tscn" id="2_nha0i"]
+[ext_resource type="PackedScene" uid="uid://statspanel1" path="res://scenes/panels/StatsPanel/StatsPanel.tscn" id="2_q24mn"]
+[ext_resource type="PackedScene" uid="uid://c18dqd7ggm0s7" path="res://scenes/panels/WeaponsPanel/WeaponsPanel.tscn" id="3_1rhdn"]
+[ext_resource type="PackedScene" uid="uid://27r2ucvir8ym" path="res://scenes/panels/DisciplinesPanel/DisciplinesPanel.tscn" id="3_gyg6b"]
+[ext_resource type="PackedScene" uid="uid://b3lr1jivo0fss" path="res://scenes/panels/NotesPanel/NotesPanel.tscn" id="4_ko0rf"]
+[ext_resource type="PackedScene" uid="uid://j1lb2vo16wib" path="res://scenes/panels/RandomPanel/RandomPanel.tscn" id="6_ostsq"]
+[ext_resource type="PackedScene" path="res://scenes/panels/InventoryPanel/InventoryPanel.tscn" id="6_sjxhf"]
+[ext_resource type="PackedScene" uid="uid://goldpanel12" path="res://scenes/panels/GoldPanel/GoldPanel.tscn" id="8_ostsq"]
+
+[sub_resource type="Theme" id="Theme_qkm1d"]
+default_font = ExtResource("1_3km4f")
+
+[node name="Main" type="Control" unique_id=400963715]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_qkm1d")
+script = ExtResource("1_main")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=714060417]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.12549, 0.117647, 0.098039, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1993325150]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=450958165]
+layout_mode = 2
+
+[node name="TopBar" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1214809452]
+layout_mode = 2
+
+[node name="BtnSave" type="Button" parent="MarginContainer/VBoxContainer/TopBar" unique_id=1178757026]
+layout_mode = 2
+text = "UI_BTN_SAVE"
+
+[node name="BtnLoad" type="Button" parent="MarginContainer/VBoxContainer/TopBar" unique_id=847099427]
+layout_mode = 2
+text = "UI_BTN_LOAD"
+
+[node name="BtnReset" type="Button" parent="MarginContainer/VBoxContainer/TopBar" unique_id=1306670255]
+layout_mode = 2
+text = "UI_BTN_RESET"
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/TopBar" unique_id=1079027696]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="LangContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TopBar" unique_id=543698044]
+layout_mode = 2
+
+[node name="BtnFR" type="Button" parent="MarginContainer/VBoxContainer/TopBar/LangContainer" unique_id=712007387]
+layout_mode = 2
+text = "FR"
+
+[node name="BtnEN" type="Button" parent="MarginContainer/VBoxContainer/TopBar/LangContainer" unique_id=26533253]
+layout_mode = 2
+text = "EN"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer" unique_id=298361551]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ColumnsLayout" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer" unique_id=1223530948]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="ColLeft" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/ColumnsLayout" unique_id=1486880056]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="StatsPanel" parent="MarginContainer/VBoxContainer/ScrollContainer/ColumnsLayout/ColLeft" unique_id=571231600 instance=ExtResource("2_q24mn")]
+layout_mode = 2
+
+[node name="WeaponsPanel" parent="MarginContainer/VBoxContainer/ScrollContainer/ColumnsLayout/ColLeft" unique_id=1333330855 instance=ExtResource("3_1rhdn")]
+layout_mode = 2
+
+[node name="NotesPanel" parent="MarginContainer/VBoxContainer/ScrollContainer/ColumnsLayout/ColLeft" unique_id=1519121763 instance=ExtResource("4_ko0rf")]
+layout_mode = 2
+
+[node name="ColCenter" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/ColumnsLayout" unique_id=725967396]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="DisciplinesPanel" parent="MarginContainer/VBoxContainer/ScrollContainer/ColumnsLayout/ColCenter" unique_id=1500763873 instance=ExtResource("3_gyg6b")]
+layout_mode = 2
+
+[node name="RandomPanel" parent="MarginContainer/VBoxContainer/ScrollContainer/ColumnsLayout/ColCenter" unique_id=1706426373 instance=ExtResource("6_ostsq")]
+layout_mode = 2
+
+[node name="ColRight" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/ColumnsLayout" unique_id=1101619651]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CombatSlot" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/ColumnsLayout/ColRight" unique_id=1606178546]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="CombatPanel" parent="MarginContainer/VBoxContainer/ScrollContainer/ColumnsLayout/ColRight/CombatSlot" unique_id=1488117252 instance=ExtResource("2_nha0i")]
+layout_mode = 2
+
+[node name="InventoryPanel" parent="MarginContainer/VBoxContainer/ScrollContainer/ColumnsLayout/ColRight" unique_id=698765088 instance=ExtResource("6_sjxhf")]
+layout_mode = 2
+
+[node name="GoldPanel" parent="MarginContainer/VBoxContainer/ScrollContainer/ColumnsLayout/ColRight" unique_id=528665474 instance=ExtResource("8_ostsq")]
+layout_mode = 2

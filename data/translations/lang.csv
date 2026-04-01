@@ -1,0 +1,19 @@
+keys,en,fr,pt
+UI_STATS_TITLE,Stats,Statistiques,Estatísticas
+UI_COMBAT_SKILL,Combat Skill,Habileté,Habilidade de Combate
+UI_ENDURANCE,Endurance,Endurance,Resistência
+UI_ROLL_STATS,Roll Stats,Tirer les Stats,Rolar Atributos
+UI_WEAPONS_TITLE,Weapons,Armes,Armas
+UI_INVENTORY_TITLE,Inventory,Inventaire,Inventário
+UI_DISCIPLINES_TITLE,Kai Disciplines,Disciplines Kaï,Disciplinas Kai
+UI_NOTES_TITLE,Notes,Notes,Notas
+UI_GOLD_TITLE,Gold Crowns,Couronnes d'or,Coroas de Ouro
+UI_COMBAT_TITLE,Combat,Combat,Combate
+UI_COMBAT_ENEMY_NAME,Enemy Name,Nom Ennemi,Nome Inimigo
+UI_COMBAT_ENEMY_SKILL,Enemy Skill,Habileté,Habilidade
+UI_COMBAT_ENEMY_ENDURANCE,Enemy Endurance,Endurance,Resistência
+UI_COMBAT_BTN_ATTACK,Attack !,Attaquer !,Atacar!
+UI_BTN_SAVE,Save,Sauvegarder,Salvar
+UI_BTN_LOAD,Load,Charger,Carregar
+UI_BTN_RESET,Reset,Réinitialiser,Resetar
+COMBAT_LOG_ROUND,"%name attacks ! Roll: %roll","%name attaque ! Tirage: %roll","%name ataca! Rolagem: %roll"
