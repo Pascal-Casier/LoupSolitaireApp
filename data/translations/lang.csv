@@ -16,4 +16,5 @@ UI_COMBAT_BTN_ATTACK,Attack !,Attaquer !,Atacar!
 UI_BTN_SAVE,Save,Sauvegarder,Salvar
 UI_BTN_LOAD,Load,Charger,Carregar
 UI_BTN_RESET,Reset,Réinitialiser,Resetar
+UI_SPECIAL_ITEMS_TITLE,Special Items,Objets Spéciaux,Itens Especiais
 COMBAT_LOG_ROUND,"%name attacks ! Roll: %roll","%name attaque ! Tirage: %roll","%name ataca! Rolagem: %roll"

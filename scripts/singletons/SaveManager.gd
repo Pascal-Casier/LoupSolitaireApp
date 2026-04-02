@@ -46,6 +46,7 @@ func load_game() -> void:
 	# Reconstruire la section General (tableaux, or, etc.)
 	if config.has_section("General"):
 		loaded_state["inventory"] = config.get_value("General", "inventory", [])
+		loaded_state["special_items"] = config.get_value("General", "special_items", [])
 		loaded_state["weapons"] = config.get_value("General", "weapons", [])
 		loaded_state["disciplines"] = config.get_value("General", "disciplines", [])
 		loaded_state["gold"] = config.get_value("General", "gold", 0)
@@ -71,6 +72,7 @@ func reset_game() -> void:
 		"current_endurance": 20
 	}
 	GameState.inventory = []
+	GameState.special_items = []
 	GameState.weapons = []
 	GameState.disciplines = []
 	GameState.gold = 0

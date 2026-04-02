@@ -7,6 +7,7 @@ signal weapons_updated(weapons)
 signal disciplines_updated(disciplines)
 signal gold_updated(amount)
 signal notes_updated(text)
+signal special_items_updated(items)
 signal combat_log_updated(log)
 signal language_changed(lang)
 
@@ -20,6 +21,7 @@ var stats := {
 }
 
 var inventory := [] # Array de dictionnaires: {"id": "repas", "name": "Repas", "amount": 1} - Max 8 objets
+var special_items := [] # Array de dictionnaires: {"id": "spec_123", "name": "Objet Ex", "amount": 1}
 var weapons := [] # Array de strings (max 2)
 var disciplines := [] # Array de strings (max 5)
 var gold: int = 0
@@ -167,6 +169,18 @@ func remove_item(index: int) -> void:
 		inventory.remove_at(index)
 		inventory_updated.emit(inventory)
 
+# === OBJETS SPECIAUX ===
+
+func add_special_item(item_name: String) -> bool:
+	special_items.append({"id": "special_" + str(randi()), "name": item_name, "amount": 1})
+	special_items_updated.emit(special_items)
+	return true
+
+func remove_special_item(index: int) -> void:
+	if index >= 0 and index < special_items.size():
+		special_items.remove_at(index)
+		special_items_updated.emit(special_items)
+
 # === DISCIPLINES ===
 
 func toggle_discipline(disc_name: String, enabled: bool) -> bool:
@@ -224,6 +238,7 @@ func get_state_dict() -> Dictionary:
 	return {
 		"stats": stats,
 		"inventory": inventory,
+		"special_items": special_items,
 		"weapons": weapons,
 		"disciplines": disciplines,
 		"gold": gold,
@@ -236,6 +251,7 @@ func get_state_dict() -> Dictionary:
 func load_state_dict(data: Dictionary) -> void:
 	stats = data.get("stats", stats)
 	inventory = data.get("inventory", inventory)
+	special_items = data.get("special_items", special_items)
 	weapons = data.get("weapons", weapons)
 	disciplines = data.get("disciplines", disciplines)
 	gold = data.get("gold", gold)
@@ -247,6 +263,7 @@ func load_state_dict(data: Dictionary) -> void:
 	# Emit all signals to update UI
 	emit_stats()
 	inventory_updated.emit(inventory)
+	special_items_updated.emit(special_items)
 	weapons_updated.emit(weapons)
 	disciplines_updated.emit(disciplines)
 	gold_updated.emit(gold)

@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://b3lr1jivo0fss" path="res://scenes/panels/NotesPanel/NotesPanel.tscn" id="4_ko0rf"]
 [ext_resource type="PackedScene" uid="uid://j1lb2vo16wib" path="res://scenes/panels/RandomPanel/RandomPanel.tscn" id="6_ostsq"]
 [ext_resource type="PackedScene" path="res://scenes/panels/InventoryPanel/InventoryPanel.tscn" id="6_sjxhf"]
+[ext_resource type="PackedScene" path="res://scenes/panels/SpecialItemsPanel/SpecialItemsPanel.tscn" id="7_special"]
 [ext_resource type="PackedScene" uid="uid://goldpanel12" path="res://scenes/panels/GoldPanel/GoldPanel.tscn" id="8_ostsq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qkm1d"]
@@ -212,4 +213,7 @@ theme_override_constants/separation = 10
 layout_mode = 2
 
 [node name="InventoryPanel" parent="MarginContainer/VBoxContainer/ScrollContainer/ColumnsLayout/ColRight/CombatSlot" unique_id=698765088 instance=ExtResource("6_sjxhf")]
+layout_mode = 2
+
+[node name="SpecialItemsPanel" parent="MarginContainer/VBoxContainer/ScrollContainer/ColumnsLayout/ColRight/CombatSlot" instance=ExtResource("7_special")]
 layout_mode = 2
