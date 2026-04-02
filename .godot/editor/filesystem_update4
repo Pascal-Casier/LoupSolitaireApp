@@ -5,3 +5,6 @@ res://scripts/singletons/GameState.gd
 res://scripts/singletons/SaveManager.gd
 res://scenes/panels/CombatPanel/CombatPanel.gd
 res://scenes/panels/StatsPanel/StatsPanel.gd
+res://scenes/panels/GoldPanel/GoldPanel.tscn
+res://scenes/main/Main.tscn
+res://themes/main_theme.tres

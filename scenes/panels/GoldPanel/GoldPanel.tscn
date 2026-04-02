@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://goldpanel12"]
+[gd_scene format=3 uid="uid://goldpanel12"]
 
-[ext_resource type="Script" path="res://scenes/panels/GoldPanel/GoldPanel.gd" id="1_gold"]
+[ext_resource type="Script" uid="uid://uyfok4xqvgcc" path="res://scenes/panels/GoldPanel/GoldPanel.gd" id="1_gold"]
 
-[node name="GoldPanel" type="PanelContainer"]
+[node name="GoldPanel" type="PanelContainer" unique_id=170709783]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -10,48 +10,51 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_gold")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1594141565]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="Header" type="ColorRect" parent="VBoxContainer"]
+[node name="Header" type="ColorRect" parent="VBoxContainer" unique_id=1673536975]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 color = Color(0.4, 0.4, 0.1, 1)
 
-[node name="TitleLabel" type="Label" parent="VBoxContainer/Header"]
+[node name="TitleLabel" type="Label" parent="VBoxContainer/Header" unique_id=733878163]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 text = "UI_GOLD_TITLE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="GoldRow" type="HBoxContainer" parent="VBoxContainer"]
+[node name="GoldRow" type="HBoxContainer" parent="VBoxContainer" unique_id=344651934]
 layout_mode = 2
 alignment = 1
 
-[node name="IconLabel" type="Label" parent="VBoxContainer/GoldRow"]
+[node name="IconLabel" type="Label" parent="VBoxContainer/GoldRow" unique_id=640710754]
 layout_mode = 2
 text = "🪙"
 
-[node name="Spacer" type="Control" parent="VBoxContainer/GoldRow"]
+[node name="Spacer" type="Control" parent="VBoxContainer/GoldRow" unique_id=1828325203]
 custom_minimum_size = Vector2(10, 0)
 layout_mode = 2
 
-[node name="GoldValueLabel" type="Label" parent="VBoxContainer/GoldRow"]
+[node name="GoldValueLabel" type="Label" parent="VBoxContainer/GoldRow" unique_id=1065956201]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 18
 text = "0 / 50"
 horizontal_alignment = 1
 
-[node name="BtnMinus" type="Button" parent="VBoxContainer/GoldRow"]
+[node name="BtnMinus" type="Button" parent="VBoxContainer/GoldRow" unique_id=1936852673]
 custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
 text = "-1"
 
-[node name="BtnPlus" type="Button" parent="VBoxContainer/GoldRow"]
+[node name="BtnPlus" type="Button" parent="VBoxContainer/GoldRow" unique_id=486790400]
 custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
 text = "+1"

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://mainscene123"]
 
 [ext_resource type="Script" uid="uid://cbyv464d3fnfh" path="res://scenes/main/Main.gd" id="1_main"]
-[ext_resource type="FontFile" uid="uid://dquebqrjfbc3a" path="res://assets/fonts/Anaktoria_hint.ttf" id="1_qkm1d"]
+[ext_resource type="Theme" uid="uid://djxoy8j8wswuu" path="res://themes/main_theme.tres" id="1_p5fgu"]
 [ext_resource type="PackedScene" uid="uid://bkvp4wrnpsefo" path="res://scenes/panels/CombatPanel/CombatPanel.tscn" id="2_nha0i"]
 [ext_resource type="PackedScene" uid="uid://statspanel1" path="res://scenes/panels/StatsPanel/StatsPanel.tscn" id="2_q24mn"]
 [ext_resource type="PackedScene" uid="uid://c18dqd7ggm0s7" path="res://scenes/panels/WeaponsPanel/WeaponsPanel.tscn" id="3_1rhdn"]
@@ -10,85 +10,66 @@
 [ext_resource type="PackedScene" uid="uid://b3lr1jivo0fss" path="res://scenes/panels/NotesPanel/NotesPanel.tscn" id="4_ko0rf"]
 [ext_resource type="PackedScene" uid="uid://j1lb2vo16wib" path="res://scenes/panels/RandomPanel/RandomPanel.tscn" id="6_ostsq"]
 [ext_resource type="PackedScene" path="res://scenes/panels/InventoryPanel/InventoryPanel.tscn" id="6_sjxhf"]
-[ext_resource type="PackedScene" path="res://scenes/panels/SpecialItemsPanel/SpecialItemsPanel.tscn" id="7_special"]
+[ext_resource type="PackedScene" uid="uid://cwspl20wkos13" path="res://scenes/panels/SpecialItemsPanel/SpecialItemsPanel.tscn" id="7_special"]
 [ext_resource type="PackedScene" uid="uid://goldpanel12" path="res://scenes/panels/GoldPanel/GoldPanel.tscn" id="8_ostsq"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qkm1d"]
-content_margin_left = 5.0
-content_margin_right = 5.0
-bg_color = Color(0.6106771, 0.21377799, 0.064407356, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.8087462, 0.85546875, 0.0011138746, 1)
-border_blend = true
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
-shadow_offset = Vector2(2, 2)
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p5fgu"]
-content_margin_left = 5.0
-content_margin_right = 5.0
-bg_color = Color(0.6106771, 0.21377799, 0.064407356, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.8087462, 0.85546875, 0.0011138746, 1)
-border_blend = true
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
-shadow_size = 2
+content_margin_left = 3.0
+content_margin_right = 3.0
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.95963544, 0.89611465, 0.056228638, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_left = 3.0
+expand_margin_right = 3.0
 shadow_offset = Vector2(2, 2)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2tpxt"]
-content_margin_left = 5.0
-content_margin_right = 5.0
-bg_color = Color(0.6106771, 0.21377799, 0.064407356, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.93880206, 0.21828409, 0.025670368, 1)
-border_blend = true
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
+content_margin_left = 3.0
+content_margin_right = 3.0
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.95963544, 0.89611465, 0.056228638, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_left = 3.0
+expand_margin_right = 3.0
 shadow_size = 2
 shadow_offset = Vector2(2, 2)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jsdfw"]
-content_margin_left = 5.0
-content_margin_right = 5.0
-bg_color = Color(0.6106771, 0.21377799, 0.064407356, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.8087462, 0.85546875, 0.0011138746, 1)
-border_blend = true
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
+content_margin_left = 3.0
+content_margin_right = 3.0
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_left = 3.0
+expand_margin_right = 3.0
+shadow_size = 2
 shadow_offset = Vector2(2, 2)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3km4f"]
-bg_color = Color(0.011764706, 0.015686275, 0.12156863, 0.61960787)
-
-[sub_resource type="Theme" id="Theme_qkm1d"]
-default_font = ExtResource("1_qkm1d")
-Button/styles/focus = SubResource("StyleBoxFlat_qkm1d")
-Button/styles/hover = SubResource("StyleBoxFlat_p5fgu")
-Button/styles/normal = SubResource("StyleBoxFlat_2tpxt")
-Button/styles/pressed = SubResource("StyleBoxFlat_jsdfw")
-PanelContainer/styles/panel = SubResource("StyleBoxFlat_3km4f")
+[sub_resource type="Theme" id="Theme_tck0d"]
+Button/styles/focus = SubResource("StyleBoxFlat_p5fgu")
+Button/styles/hover = SubResource("StyleBoxFlat_2tpxt")
+Button/styles/normal = SubResource("StyleBoxFlat_jsdfw")
+Button/styles/pressed = SubResource("StyleBoxFlat_p5fgu")
 
 [node name="Main" type="Control" unique_id=400963715]
 layout_mode = 3
@@ -97,7 +78,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource("Theme_qkm1d")
+theme = ExtResource("1_p5fgu")
 script = ExtResource("1_main")
 
 [node name="ColorRect" type="TextureRect" parent="." unique_id=1631583796]
@@ -131,6 +112,7 @@ theme_override_constants/separation = 9
 
 [node name="TopBar" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1214809452]
 layout_mode = 2
+theme = SubResource("Theme_tck0d")
 theme_override_constants/separation = 10
 
 [node name="BtnSave" type="Button" parent="MarginContainer/VBoxContainer/TopBar" unique_id=1178757026]
@@ -215,5 +197,5 @@ layout_mode = 2
 [node name="InventoryPanel" parent="MarginContainer/VBoxContainer/ScrollContainer/ColumnsLayout/ColRight/CombatSlot" unique_id=698765088 instance=ExtResource("6_sjxhf")]
 layout_mode = 2
 
-[node name="SpecialItemsPanel" parent="MarginContainer/VBoxContainer/ScrollContainer/ColumnsLayout/ColRight/CombatSlot" instance=ExtResource("7_special")]
+[node name="SpecialItemsPanel" parent="MarginContainer/VBoxContainer/ScrollContainer/ColumnsLayout/ColRight/CombatSlot" unique_id=2074023696 instance=ExtResource("7_special")]
 layout_mode = 2
