@@ -1,8 +1,29 @@
 [gd_scene format=3 uid="uid://cwspl20wkos13"]
 
-[ext_resource type="Script" path="res://scenes/panels/SpecialItemsPanel/SpecialItemsPanel.gd" id="1_spl"]
+[ext_resource type="Script" uid="uid://d1kytvhbj36rs" path="res://scenes/panels/SpecialItemsPanel/SpecialItemsPanel.gd" id="1_spl"]
+[ext_resource type="Texture2D" uid="uid://hrlby6tyh7bp" path="res://assets/images/leather.png" id="img_leather"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_leather"]
+texture = ExtResource("img_leather")
+texture_margin_left = 32.0
+texture_margin_top = 32.0
+texture_margin_right = 32.0
+texture_margin_bottom = 32.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_le"]
+
+[sub_resource type="Theme" id="Theme_leather"]
+Label/colors/font_color = Color(0.9, 0.85, 0.75, 1)
+LineEdit/colors/font_color = Color(0.9, 0.85, 0.75, 1)
+LineEdit/colors/font_placeholder_color = Color(0.6, 0.55, 0.45, 1)
+LineEdit/styles/normal = SubResource("StyleBoxEmpty_le")
+LineEdit/styles/focus = SubResource("StyleBoxEmpty_le")
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_leather")
 
 [node name="SpecialItemsPanel" type="PanelContainer"]
+theme = SubResource("Theme_leather")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -17,7 +38,7 @@ theme_override_constants/separation = 10
 [node name="Header" type="ColorRect" parent="VBoxContainer"]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
-color = Color(0.1, 0.1, 0.3, 1)
+color = Color(0.15, 0.08, 0.04, 1)
 
 [node name="TitleLabel" type="Label" parent="VBoxContainer/Header"]
 layout_mode = 1

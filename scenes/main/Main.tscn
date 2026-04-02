@@ -6,12 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://statspanel1" path="res://scenes/panels/StatsPanel/StatsPanel.tscn" id="2_q24mn"]
 [ext_resource type="PackedScene" uid="uid://c18dqd7ggm0s7" path="res://scenes/panels/WeaponsPanel/WeaponsPanel.tscn" id="3_1rhdn"]
 [ext_resource type="PackedScene" uid="uid://27r2ucvir8ym" path="res://scenes/panels/DisciplinesPanel/DisciplinesPanel.tscn" id="3_gyg6b"]
-[ext_resource type="Texture2D" uid="uid://cjpvnn0mumfqf" path="res://assets/images/loup.jpg" id="3_qkm1d"]
 [ext_resource type="PackedScene" uid="uid://b3lr1jivo0fss" path="res://scenes/panels/NotesPanel/NotesPanel.tscn" id="4_ko0rf"]
 [ext_resource type="PackedScene" uid="uid://j1lb2vo16wib" path="res://scenes/panels/RandomPanel/RandomPanel.tscn" id="6_ostsq"]
-[ext_resource type="PackedScene" path="res://scenes/panels/InventoryPanel/InventoryPanel.tscn" id="6_sjxhf"]
+[ext_resource type="PackedScene" uid="uid://cnvnuy0wkos13" path="res://scenes/panels/InventoryPanel/InventoryPanel.tscn" id="6_sjxhf"]
 [ext_resource type="PackedScene" uid="uid://cwspl20wkos13" path="res://scenes/panels/SpecialItemsPanel/SpecialItemsPanel.tscn" id="7_special"]
 [ext_resource type="PackedScene" uid="uid://goldpanel12" path="res://scenes/panels/GoldPanel/GoldPanel.tscn" id="8_ostsq"]
+[ext_resource type="Texture2D" uid="uid://en7m84dq57mu" path="res://assets/images/parchment.png" id="img_parchment"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p5fgu"]
 content_margin_left = 3.0
@@ -65,11 +65,21 @@ expand_margin_right = 3.0
 shadow_size = 2
 shadow_offset = Vector2(2, 2)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_parch"]
+texture_margin_left = 32.0
+texture_margin_top = 32.0
+texture_margin_right = 32.0
+texture_margin_bottom = 32.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
 [sub_resource type="Theme" id="Theme_tck0d"]
 Button/styles/focus = SubResource("StyleBoxFlat_p5fgu")
 Button/styles/hover = SubResource("StyleBoxFlat_2tpxt")
 Button/styles/normal = SubResource("StyleBoxFlat_jsdfw")
 Button/styles/pressed = SubResource("StyleBoxFlat_p5fgu")
+Label/colors/font_color = Color(0.12, 0.08, 0.02, 1)
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_parch")
 
 [node name="Main" type="Control" unique_id=400963715]
 layout_mode = 3
@@ -92,7 +102,7 @@ offset_right = 90.0
 offset_bottom = 24.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_qkm1d")
+texture = ExtResource("img_parchment")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1993325150]
 layout_mode = 1
@@ -151,6 +161,7 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme = SubResource("Theme_tck0d")
 theme_override_constants/separation = 20
 alignment = 1
 
@@ -189,7 +200,7 @@ size_flags_horizontal = 3
 [node name="CombatSlot" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/ColumnsLayout/ColRight" unique_id=1606178546]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_constants/separation = 10
+theme_override_constants/separation = 4
 
 [node name="CombatPanel" parent="MarginContainer/VBoxContainer/ScrollContainer/ColumnsLayout/ColRight/CombatSlot" unique_id=1488117252 instance=ExtResource("2_nha0i")]
 layout_mode = 2

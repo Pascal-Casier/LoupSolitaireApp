@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://d2dtefnhh1v8t" path="res://scenes/panels/NotesPanel/NotesPanel.gd" id="1_notes"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_notes"]
+
 [node name="NotesPanel" type="PanelContainer" unique_id=1957184988]
 anchors_preset = 15
 anchor_right = 1.0
@@ -17,7 +19,7 @@ theme_override_constants/separation = 10
 [node name="Header" type="ColorRect" parent="VBoxContainer" unique_id=1586324255]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
-color = Color(0.2, 0.2, 0.2, 0.39215687)
+color = Color(0.25, 0.15, 0.05, 1)
 
 [node name="TitleLabel" type="Label" parent="VBoxContainer/Header" unique_id=605923159]
 layout_mode = 1
@@ -34,5 +36,8 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.022135437, 0.021818392, 0.021818392, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_notes")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_notes")
 placeholder_text = "Vos notes d'aventure..."
 wrap_mode = 1
