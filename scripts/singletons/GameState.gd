@@ -1,7 +1,7 @@
 extends Node
 
 # Signaux MVC pour l'interface UI
-signal stats_updated(combat_skill, max_endurance, current_endurance)
+signal stats_updated(base_combat_skill, total_combat_skill, max_endurance, current_endurance)
 signal inventory_updated(items)
 signal weapons_updated(weapons)
 signal disciplines_updated(disciplines)
@@ -92,7 +92,7 @@ func has_discipline(disc: String) -> bool:
 	return disciplines.has(disc)
 
 func emit_stats() -> void:
-	stats_updated.emit(get_total_combat_skill(), stats.max_endurance, stats.current_endurance)
+	stats_updated.emit(stats.combat_skill, get_total_combat_skill(), stats.max_endurance, stats.current_endurance)
 
 # === MÉTHODES DE COMBAT ===
 

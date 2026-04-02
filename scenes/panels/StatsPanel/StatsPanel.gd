@@ -45,8 +45,12 @@ func _on_roll_stats() -> void:
 	btn_roll_stats.visible = false
 
 # Cette fonction est appelée automatiquement dès que GameState modifie les stats
-func _on_stats_updated(combat_skill: int, max_endurance: int, current_endurance: int) -> void:
-	lbl_combat_skill_val.text = str(combat_skill)
+func _on_stats_updated(base_cs: int, total_cs: int, max_endurance: int, current_endurance: int) -> void:
+	if base_cs == total_cs:
+		lbl_combat_skill_val.text = str(base_cs)
+	else:
+		lbl_combat_skill_val.text = str(base_cs) + " (" + str(total_cs) + ")"
+		
 	lbl_endurance_val.text = str(current_endurance) + " / " + str(max_endurance)
 	
 	# Gestion visuelle de couleur selon l'endurance
@@ -58,6 +62,6 @@ func _on_stats_updated(combat_skill: int, max_endurance: int, current_endurance:
 	# Activer/Désactiver les boutons de +1 et -1 selon les limites
 	btn_endurance_plus.disabled = (current_endurance >= max_endurance)
 	btn_endurance_minus.disabled = (current_endurance <= 0)
-	btn_cs_minus.disabled = (combat_skill <= 0)
+	btn_cs_minus.disabled = (base_cs <= 0)
 	
 	btn_roll_stats.visible = not GameState.stats_rolled
