@@ -140,8 +140,11 @@ func execute_combat_round(enemy_skill: int, enemy_endurance: int, enemy_name: St
 	else:
 		modify_current_endurance(-player_damage)
 		
+	var e_dmg_str = tr("COMBAT_KILLED") if enemy_damage == -1 else str(enemy_damage)
+	var p_dmg_str = tr("COMBAT_KILLED") if player_damage == -1 else str(player_damage)
+	
 	# Log traduit et formaté
-	var log_str = tr("COMBAT_LOG_ROUND").replace("%name", enemy_name).replace("%roll", str(roll))
+	var log_str = tr("COMBAT_LOG_ROUND").replace("%name", enemy_name).replace("%roll", str(roll)).replace("%edmg", e_dmg_str).replace("%pdmg", p_dmg_str)
 	combat_log_updated.emit(log_str)
 	
 	return {"enemy_dmg": enemy_damage, "player_dmg": player_damage, "new_enemy_hp": new_enemy_endurance}

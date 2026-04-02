@@ -17,4 +17,6 @@ UI_BTN_SAVE,Save,Sauvegarder,Salvar
 UI_BTN_LOAD,Load,Charger,Carregar
 UI_BTN_RESET,Reset,Réinitialiser,Resetar
 UI_SPECIAL_ITEMS_TITLE,Special Items,Objets Spéciaux,Itens Especiais
-COMBAT_LOG_ROUND,"%name attacks ! Roll: %roll","%name attaque ! Tirage: %roll","%name ataca! Rolagem: %roll"
+COMBAT_LOG_ROUND,"Roll: %roll | %name: -%edmg EP | Player: -%pdmg EP","Tirage: %roll | %name : -%edmg END | Vous : -%pdmg END","Rolagem: %roll | %name: -%edmg END | Você: -%pdmg END"
+COMBAT_KILLED,"Killed","Tué","Morto"
+COMBAT_ENEMY_DEFEATED,"%name is defeated!","%name est vaincu !","%name foi derrotado!"

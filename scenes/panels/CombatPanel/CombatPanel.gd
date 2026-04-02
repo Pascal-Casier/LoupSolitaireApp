@@ -37,7 +37,8 @@ func _on_attack_pressed() -> void:
 	tween.tween_property(edit_enemy_endurance, "modulate", Color(1, 1, 1), 0.2)
 	
 	if new_hp <= 0:
-		lbl_combat_log.text += "\n" + enemy_name + " est vaincu !"
+		var defeated_text = tr("COMBAT_ENEMY_DEFEATED").replace("%name", enemy_name)
+		lbl_combat_log.text += "\n" + defeated_text
 
 func _on_combat_log(log_text: String) -> void:
 	lbl_combat_log.text += "\n" + log_text

@@ -3,3 +3,4 @@ res://data/translations/lang.fr.translation
 res://data/translations/lang.pt.translation
 res://scripts/singletons/GameState.gd
 res://scripts/singletons/SaveManager.gd
+res://scenes/panels/CombatPanel/CombatPanel.gd
