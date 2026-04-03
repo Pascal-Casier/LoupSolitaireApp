@@ -1,5 +1,7 @@
-Button
+ColorRect
+TextureRect
 Control
+Button
 Label
 HBoxContainer
 TabContainer
@@ -8,4 +10,3 @@ RichTextLabel
 ScrollContainer
 MarginContainer
 PanelContainer
-TextureRect

@@ -1,9 +1,13 @@
 [gd_scene format=3 uid="uid://vsoj0l4fojbx"]
 
+[ext_resource type="Theme" uid="uid://djxoy8j8wswuu" path="res://themes/main_theme.tres" id="1_2atp4"]
 [ext_resource type="Script" uid="uid://d2e7plswm6c7d" path="res://heros.gd" id="1_npfgu"]
+[ext_resource type="FontFile" uid="uid://dte2ompsibk6n" path="res://assets/fonts/Bungee-Regular.ttf" id="2_7n8aw"]
 [ext_resource type="FontFile" uid="uid://b3jo60ffyju11" path="res://assets/fonts/ChangaOne-Italic.ttf" id="2_aq171"]
 [ext_resource type="PackedScene" uid="uid://d2cn4xjd5cnaj" path="res://book/book_ui.tscn" id="2_i26tb"]
+[ext_resource type="FontFile" uid="uid://dquebqrjfbc3a" path="res://assets/fonts/Anaktoria_hint.ttf" id="3_2atp4"]
 [ext_resource type="PackedScene" uid="uid://mainscene123" path="res://scenes/main/Main.tscn" id="3_aq171"]
+[ext_resource type="Texture2D" uid="uid://bou8ecmgwakbm" path="res://assets/images/MapaLivre dont vous etes le heros.png" id="8_8lasl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7n8aw"]
 bg_color = Color(0.094682336, 0.021987915, 0.51171875, 1)
@@ -54,7 +58,17 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_2atp4")
 script = ExtResource("1_npfgu")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=282487508]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.07058824, 0.047058824, 0.23137255, 1)
 
 [node name="TopBar" type="HBoxContainer" parent="." unique_id=1776155473]
 layout_mode = 1
@@ -62,21 +76,27 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 28.0
 grow_horizontal = 2
+theme_override_constants/separation = 17
+alignment = 2
 
 [node name="Label" type="Label" parent="TopBar" unique_id=819349628]
 layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("2_7n8aw")
 text = "Loup Solitaire"
 
 [node name="Spacer" type="Control" parent="TopBar" unique_id=1261121248]
+custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
-size_flags_horizontal = 3
 
 [node name="BtnSave" type="Button" parent="TopBar" unique_id=1422674820]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_2atp4")
 text = "Sauvegarder"
 
 [node name="BtnLoad" type="Button" parent="TopBar" unique_id=1557711230]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_2atp4")
 text = "Charger"
 
 [node name="TabContainer" type="TabContainer" parent="." unique_id=1115660781]
@@ -106,3 +126,18 @@ metadata/_tab_index = 0
 visible = false
 layout_mode = 2
 metadata/_tab_index = 1
+
+[node name="Map" type="Control" parent="TabContainer" unique_id=770714140]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Map" unique_id=658767584]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_8lasl")
+expand_mode = 3

@@ -39,7 +39,7 @@ theme_override_constants/margin_top = 70
 layout_mode = 2
 
 [node name="StoryText" type="RichTextLabel" parent="StoryPanel/MarginContainer/ScrollContainer" unique_id=102454858]
-custom_minimum_size = Vector2(600, 450)
+custom_minimum_size = Vector2(600, 300)
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
