@@ -32,6 +32,10 @@ var stats_rolled: bool = false
 var has_weapon_mastery: bool = false
 var mastered_weapon: String = ""
 
+# === NAVIGATION LIVRE ===
+var return_section: String = ""      # section où revenir après un événement
+var current_enemy: Dictionary = {}   # { "name": "Loup", "skill": 14, "endurance": 20 }
+
 # Table de Combat (Loup Solitaire)
 # Ratio de combat de -11 à +11. Chaque sous-tableau correspond au D10 (0 à 9).
 # Format [Dégâts Ennemi, Dégâts Joueur]. T = Tué (représenté par -1)
@@ -237,6 +241,15 @@ func change_language(lang_code: String) -> void:
 	TranslationServer.set_locale(lang_code)
 	language_changed.emit(lang_code)
 
+func set_combat_enemy(name: String, skill: int, endurance: int, return_to: String) -> void:
+	current_enemy = {"name": name, "skill": skill, "endurance": endurance}
+	return_section = return_to
+
+func clear_navigation() -> void:
+	return_section = ""
+	current_enemy = {}
+
+
 func get_state_dict() -> Dictionary:
 	return {
 		"stats": stats,
@@ -248,7 +261,9 @@ func get_state_dict() -> Dictionary:
 		"notes": notes,
 		"stats_rolled": stats_rolled,
 		"has_weapon_mastery": has_weapon_mastery,
-		"mastered_weapon": mastered_weapon
+		"mastered_weapon": mastered_weapon,
+		"return_section": return_section,
+		"current_enemy": current_enemy,
 	}
 
 func load_state_dict(data: Dictionary) -> void:
@@ -271,3 +286,5 @@ func load_state_dict(data: Dictionary) -> void:
 	disciplines_updated.emit(disciplines)
 	gold_updated.emit(gold)
 	notes_updated.emit(notes)
+	return_section = data.get("return_section", "")
+	current_enemy = data.get("current_enemy", {})

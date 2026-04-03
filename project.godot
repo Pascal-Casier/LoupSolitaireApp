@@ -25,6 +25,8 @@ config/icon="res://icon.svg"
 GameState="*res://scripts/singletons/GameState.gd"
 SaveManager="*res://scripts/singletons/SaveManager.gd"
 AudioManager="*res://scripts/singletons/AudioManager.gd"
+BookManager="*uid://3otv2bh26nmo"
+GameState1="*uid://vup27jw34x4n"
 
 [display]
 

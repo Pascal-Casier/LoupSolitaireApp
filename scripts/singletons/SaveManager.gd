@@ -10,6 +10,9 @@ func save_game() -> void:
 	var config = ConfigFile.new()
 	var state = GameState.get_state_dict()
 	
+	# Ajouter la section courante du livre
+	state["current_section"] = BookManager.current_section_id
+	
 	for section in state.keys():
 		var value = state[section]
 		if typeof(value) == TYPE_DICTIONARY:
@@ -55,6 +58,11 @@ func load_game() -> void:
 		loaded_state["mastered_weapon"] = config.get_value("General", "mastered_weapon", "")
 
 	GameState.load_state_dict(loaded_state)
+	
+	# Restaurer la section du livre
+	var current_section = config.get_value("General", "current_section", "1")
+	BookManager.go_to_section(current_section)
+	
 	load_successful.emit()
 	print("Partie chargée avec succès.")
 
@@ -83,4 +91,11 @@ func reset_game() -> void:
 	
 	# Émettre les signaux
 	GameState.load_state_dict(GameState.get_state_dict())
+	
+	GameState.return_section = ""
+	GameState.current_enemy = {}
+	BookManager.go_to_section("1")
 	print("Jeu réinitialisé.")
+
+func has_save() -> bool:
+	return FileAccess.file_exists(SAVE_PATH)

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="BookSection" format=3 uid="uid://3hg55ou5tqpd"]
+
+[ext_resource type="Script" uid="uid://c36mdfpmskfdk" path="res://book/choice.gd" id="1_7ur1i"]
+[ext_resource type="Script" uid="uid://huajmjcdbb7j" path="res://book/book_section.gd" id="2_bg40x"]
+
+[sub_resource type="Resource" id="Resource_7ur1i"]
+script = ExtResource("1_7ur1i")
+label = "Retourner en arrière"
+goto_section = "1"
+metadata/_custom_type_script = "uid://c36mdfpmskfdk"
+
+[resource]
+script = ExtResource("2_bg40x")
+id = "2"
+text = "Le chemin du nord mène à une vieille tour en ruines."
+choices = Array[ExtResource("1_7ur1i")]([SubResource("Resource_7ur1i")])
+metadata/_custom_type_script = "uid://huajmjcdbb7j"

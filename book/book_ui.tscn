@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://d2cn4xjd5cnaj"]
+
+[ext_resource type="Texture2D" uid="uid://cjpvnn0mumfqf" path="res://assets/images/loup.jpg" id="1_55c43"]
+[ext_resource type="Script" uid="uid://dti86m2cc13df" path="res://book/book_ui.gd" id="1_ecp0u"]
+
+[node name="BookUI" type="Control" unique_id=589556038]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ecp0u")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1005930552]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_55c43")
+expand_mode = 2
+
+[node name="StoryPanel" type="PanelContainer" parent="." unique_id=595443171]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -176.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="StoryPanel" unique_id=1946575552]
+layout_mode = 2
+theme_override_constants/margin_top = 70
+
+[node name="ScrollContainer" type="ScrollContainer" parent="StoryPanel/MarginContainer" unique_id=1415683646]
+layout_mode = 2
+
+[node name="StoryText" type="RichTextLabel" parent="StoryPanel/MarginContainer/ScrollContainer" unique_id=102454858]
+custom_minimum_size = Vector2(600, 450)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+bbcode_enabled = true
+fit_content = true
+
+[node name="ChoicesPanel" type="VBoxContainer" parent="." unique_id=1442439352]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -116.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 8

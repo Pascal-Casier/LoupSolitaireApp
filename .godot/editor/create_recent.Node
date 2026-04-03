@@ -1,1 +1,11 @@
+Button
+Control
+Label
+HBoxContainer
+TabContainer
+VBoxContainer
+RichTextLabel
+ScrollContainer
+MarginContainer
+PanelContainer
 TextureRect
